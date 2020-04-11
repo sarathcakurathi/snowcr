@@ -1,14 +1,15 @@
 from change import create_change_request
 
-def main(template_id, params):
-    cr = create_change_request(template_id, params)
+def main(env, template_name, params):
+    cr = create_change_request(env, template_name, params)
     print(cr)
 
 
 if __name__ == "__main__":
-    template_id = "xyz"
+    template_name = "xyz"
+    env = "dev"
     params = {}
     params['Description'] = "Sample CR"
     # Add other parameters
-    main(template_id, params)
+    main(env, template_name, params)
 
